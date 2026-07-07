@@ -1,0 +1,38 @@
+{
+  description = "The flake to build my website";
+
+  inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    flake-utils.url = "github:numtide/flake-utils";
+  };
+
+  outputs =
+    {
+      nixpkgs,
+      flake-utils,
+      ...
+    }:
+
+    flake-utils.lib.eachDefaultSystem (
+      local-system:
+      let
+        pkgs = nixpkgs.legacyPackages.${local-system};
+      in
+      {
+        devShells.default = pkgs.mkShell {
+          name = "shorthop.app flake";
+
+          packages = with pkgs; [
+            # Runtime (only for the local development)
+            bun
+
+            # Linter
+            oxlint
+
+            # Bundler
+            vitejs
+          ];
+        };
+      }
+    );
+}
