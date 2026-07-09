@@ -26,11 +26,18 @@
             # Runtime (only for the local development)
             bun
 
-            # Linter
+            # LSP tools
             oxlint
+            oxfmt
 
             # Bundler
             vitejs
+
+            # Styling
+            tailwindcss_4
+
+            # Deployment
+            firebase-tools
           ];
         };
       }
