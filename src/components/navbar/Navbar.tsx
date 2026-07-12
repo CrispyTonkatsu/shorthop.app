@@ -3,14 +3,14 @@ import ThemeSwapper from "./ThemeSwapper";
 
 export default function Navbar() {
   return (
-    <div className="navbar hidden lg:flex bg-base-200 shadow-sm">
+    <div className="navbar hidden lg:flex bg-base-100/10 backdrop-blur border-base-content/10 sticky top-0 z-50">
       <div className="navbar-start">
-        <Link className="px-15 btn btn-primary btn-ghost" to="/">
-          shorthop.dev
+        <Link className="btn btn-primary btn-ghost" to="/">
+          <div className="text-lg">shorthop.dev</div>
         </Link>
       </div>
       <div className="navbar-center">
-        <ul className="menu menu-horizontal bg-base-200 rounded-box">
+        <ul className="menu menu-horizontal rounded-box">
           <li>
             <Link to="/projects">
               Projects
@@ -80,7 +80,7 @@ export default function Navbar() {
         </ul>
       </div>
       <div className="navbar-end">
-        <ThemeSwapper lightTheme="light" darkTheme="abyss" />
+        <ThemeSwapper lightTheme="light" darkTheme="sunset" />
       </div>
     </div>
   );

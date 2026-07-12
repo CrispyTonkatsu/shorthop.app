@@ -6,7 +6,13 @@ import Projects from "./pages/Projects.tsx";
 export default function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+      <div
+        style={{
+          backgroundImage: `url("https://images.pexels.com/photos/7135053/pexels-photo-7135053.jpeg")`,
+        }}
+      >
+        <Navbar />
+      </div>
 
       <Routes>
         <Route path="/" element={<Home />} />
