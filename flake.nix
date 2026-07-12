@@ -27,6 +27,7 @@
             bun
 
             # LSP tools
+            vtsls
             oxlint
             oxfmt
 

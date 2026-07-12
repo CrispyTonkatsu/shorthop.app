@@ -1,7 +1,17 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home.tsx";
+import Navbar from "./components/navbar/Navbar.tsx";
+import Projects from "./pages/Projects.tsx";
+
 export default function App() {
   return (
-    <div className="flex h-screen items-center justify-center bg-base-200">
-      <button className="btn btn-primary btn-lg">If I am purple, it works!</button>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
