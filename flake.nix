@@ -28,8 +28,6 @@
 
             # LSP tools
             vtsls
-            oxlint
-            oxfmt
 
             # Bundler
             vitejs
