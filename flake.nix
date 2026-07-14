@@ -28,6 +28,7 @@
 
             # LSP tools
             vtsls
+            tailwindcss-language-server
 
             # Bundler
             vitejs

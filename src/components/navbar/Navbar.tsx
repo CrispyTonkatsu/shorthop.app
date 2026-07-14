@@ -4,14 +4,7 @@ import ThemeSwapper from "./ThemeSwapper";
 export default function Navbar() {
   return (
     <div
-      className="navbar hidden lg:flex bg-base-100/80 backdrop-blur border-base-content/10 sticky top-0 z-50"
-      style={{
-        // TODO: Change the pattern to something not ass to see (maybe learn how to make your own)
-        backgroundColor: "#E5E5F7",
-        opacity: 0.8,
-        background: "repeating-linear-gradient(-45deg, #E5E5F7 0px, #E5E5F7 5px, transparent 5px, transparent 8px), repeating-linear-gradient(45deg, #E5E5F7 0px, #E5E5F7 5px, transparent 5px, transparent 8px), linear-gradient(#444CF7,#444CF7)",
-      }}
-
+      className="navbar hidden lg:flex bg-base-300/70 backdrop-blur border-b border-base-content/10 sticky top-0 z-50"
     >
       <div className="navbar-start">
         <Link className="btn btn-primary btn-ghost" to="/">
