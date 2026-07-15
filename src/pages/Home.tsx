@@ -35,14 +35,14 @@ export default function Home() {
       {/* TODO: left off here creating the layout for the project and blog cards*/}
 
       <div className="w-1/2 p-10 pl-3">
-        <div className="carousel w-full h-1/3 pb-3 pt-3">
+        <div className="carousel h-4/9 pb-3 pt-3">
           <div id="item1" className="carousel-item card card-side card-dash w-full bg-base-300 shadow-sm">
-            <div className="card-body">
+            <div className="card-body w-2/3">
               <div className="card-title">
                 Test Card
               </div>
 
-              <p>This is where the project synopsis would go</p>
+              <p>This is where the project synopsis would go and not exceed this length.</p>
 
               <div className="card-actions justify-end">
                 <div className="btn btn-ghost btn-secondary">
