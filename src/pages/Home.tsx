@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="flex bg-dot-pattern h-screen">
+    <div className="flex">
       <div className="w-1/2 p-10 pr-3">
         <div className="text-left">
           <p className="text-4xl">
@@ -35,9 +35,9 @@ export default function Home() {
       {/* TODO: left off here creating the layout for the project and blog cards*/}
 
       <div className="w-1/2 p-10 pl-3">
-        <div className="carousel h-4/9 pb-3 pt-3">
-          <div id="item1" className="carousel-item card card-side card-dash w-full bg-base-300 shadow-sm">
-            <div className="card-body w-2/3">
+        <div className="carousel">
+          <div id="item1" className="carousel-item card card-side card-dash w-full bg-base-100 shadow-sm">
+            <div className="card-body">
               <div className="card-title">
                 Test Card
               </div>
@@ -65,7 +65,7 @@ export default function Home() {
                 Test Card 2
               </div>
 
-              <p>This is where the project synopsis would go buty 2</p>
+              <p>This is where the project synopsis would go but 2</p>
 
               <div className="card-actions justify-end">
                 <div className="btn btn-ghost btn-secondary">
