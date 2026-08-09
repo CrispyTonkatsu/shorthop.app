@@ -4,7 +4,7 @@ import ThemeSwapper from "./ThemeSwapper";
 export default function Navbar() {
   return (
     <div
-      className="navbar hidden lg:flex bg-base-300/70 backdrop-blur border-b border-base-content/10 sticky top-0 z-50"
+      className="navbar hidden md:flex bg-base-300/70 backdrop-blur border-b border-base-content/10 sticky top-0 z-50"
     >
       <div className="navbar-start">
         <Link className="btn btn-primary btn-ghost" to="/">
