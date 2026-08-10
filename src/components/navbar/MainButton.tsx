@@ -7,8 +7,8 @@ export default function MainButton() {
   };
 
   return (
-    <Link className="btn btn-neutral" to={MainButtonData.link}>
-      {MainButtonData.label}
+    <Link className="btn btn-primary btn-ghost" to={MainButtonData.link}>
+      <div className="text-lg">{MainButtonData.label}</div>
     </Link>
   );
 }

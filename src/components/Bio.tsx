@@ -11,7 +11,7 @@ export default function Bio() {
       </p>
       <br />
 
-      <div className="text-xl">
+      <div className="text-2xl">
         <p>Software Engineer:</p>
         <ul className="list-disc pl-4">
           <li className="text-primary">Physics Simulations</li>
@@ -22,9 +22,9 @@ export default function Bio() {
       </div>
       <br />
 
-      <p className="hidden md:inline">
+      <div className="hidden md:inline text-lg">
         I am passionate about the intersection between the real world and digital systems. I am currently specializing in simulation development, computational mathematics and embedded systems. Having lived in 6 countries across America, South America and Asia (Bolivia, Thailand, Argentina, Malaysia, Philippines, USA), I easily connect with people and work enabling a culture of learning to exceed expectations.
-      </p>
+      </div>
 
       <div className="collapse collapse-arrow bg-base-100 md:hidden">
         <input type="checkbox" />
