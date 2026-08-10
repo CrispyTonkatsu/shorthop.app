@@ -9,14 +9,15 @@ export default function Bio() {
           <a href="https://www.linkedin.com/in/edgar-donoso-mansilla">Edgar Jose Donoso Mansilla</a>
         </div>
       </p>
+      <br />
 
-      <div className="flex flex-row justify-center">
-        <ul className="list text-xl italic text-center">
-          <li className="list-row text-primary">Physics Simulation Developer</li>
-          <li className="list-row text-secondary">Embedded Systems Engineer</li>
-          <li className="list-row text-info">Computer Graphics Engineer</li>
-        </ul>
+      <div className="text-xl font-light wrap-normal">
+        <text className="text-primary">Physics Simulation Developer </text>
+        <text className="text-secondary">Embedded Systems Engineer </text>
+        <text className="text-info">Computer Graphics Engineer </text>
+        <text className="text-accent">Gameplay Systems Engineer </text>
       </div>
+      <br />
 
       <div className="hidden md:inline text-lg">
         I am passionate about the intersection between the real world and digital systems. I am currently specializing in simulation development, computational mathematics and embedded systems. Having lived in 6 countries across America, South America and Asia (Bolivia, Thailand, Argentina, Malaysia, Philippines, USA), I easily connect with people and work enabling a culture of learning to exceed expectations.

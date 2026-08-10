@@ -20,7 +20,7 @@ export default function Home() {
           <Bio />
         </div>
 
-        <div className="flex-1 p-8 md:pl-4 pt-0 md:pt-8">
+        <div className="flex-1 p-4 md:pl-4 pt-0 md:pt-4">
 
           {
             // TODO: Replace this with video clips or a web simulation of control theory because that is cool and flashy
