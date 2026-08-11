@@ -12,12 +12,12 @@ export default function Navbar() {
     },
     {
       text: "Blog",
-      link: "/projects",
+      link: "/blog",
       svgPath: "m4.988 19.012 5.41-5.41m2.366-6.424 4.058 4.058-2.03 5.41L5.3 20 4 18.701l3.355-9.494 5.41-2.029Zm4.626 4.625L12.197 6.61 14.807 4 20 9.194l-2.61 2.61Z",
     },
     {
       text: "Contact",
-      link: "/projects",
+      link: "/contact",
       svgPath: "M11 16v-5.5A3.5 3.5 0 0 0 7.5 7m3.5 9H4v-5.5A3.5 3.5 0 0 1 7.5 7m3.5 9v4M7.5 7H14m0 0V4h2.5M14 7v3m-3.5 6H20v-6a3 3 0 0 0-3-3m-2 9v4m-8-6.5h1",
     }
   ];

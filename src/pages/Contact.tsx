@@ -1,14 +1,9 @@
-export default function Projects() {
-  // NOTE: Consider adding a filter functionality for different types of projects
-
+export default function Contact() {
   return (
     <div className="flex flex-col min-h-1/2 place-content-center">
-      {
-        // TODO: Left off here setting up the projects page
-      }
       <div className="flex flex-row place-self-center">
         <div className="text-7xl text-info font-bold italic">
-          Setting up the projects page
+          Setting up the contact page
         </div>
       </div>
     </div>
