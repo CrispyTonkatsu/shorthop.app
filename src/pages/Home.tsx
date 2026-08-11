@@ -60,24 +60,29 @@ export default function Home() {
           // TODO: Automate this when the project data is in another format we can load up
         }
 
-        <ProjectCard
-          projectName="Project Name"
-          teamName="Non Applicable Studios"
-          projectRoles={["Programmer", "Jester", "Producer", "Workaholic"]}
-          description=""
-          image="https://images.unsplash.com/photo-1575639807401-0c333374e3ed?ixid=M3wxMTI1OHwwfDF8cmFuZG9tfHx8fHx8fHx8MTc4NjMwMzExN3w&ixlib=rb-4.1.0&q=85&w=1920"
-          projectPage=""
-          isRight={false}
-        />
+        <div className="p-4 md:p-8">
+          <ProjectCard
+            projectName="Project Name"
+            teamName="Non Applicable Studios"
+            projectRoles={["Programmer", "Jester", "Producer", "Workaholic"]}
+            description="This is a simple 2 sentence description. It is concise and simple which allows for maximizing space"
+            image="https://images.unsplash.com/photo-1575639807401-0c333374e3ed?ixid=M3wxMTI1OHwwfDF8cmFuZG9tfHx8fHx8fHx8MTc4NjMwMzExN3w&ixlib=rb-4.1.0&q=85&w=1920"
+            projectPage="/projects"
+            isRight={false}
+          />
+        </div>
 
-        <ProjectCard
-          projectName="Project Name"
-          teamName="Non Applicable Studios"
-          projectRoles={["Programmer", "Jester", "Producer", "Workaholic"]}
-          description=""
-          projectPage=""
-          isRight={true}
-        />
+        <div className="p-4 md:p-8">
+          <ProjectCard
+            projectName="Project Name"
+            teamName="Non Applicable Studios"
+            projectRoles={["Programmer", "Jester", "Producer", "Workaholic"]}
+            description="This is a simple 2 sentence description. It is concise and simple which allows for maximizing space"
+            image="https://images.unsplash.com/photo-1575639807401-0c333374e3ed?ixid=M3wxMTI1OHwwfDF8cmFuZG9tfHx8fHx8fHx8MTc4NjMwMzExN3w&ixlib=rb-4.1.0&q=85&w=1920"
+            projectPage="/projects"
+            isRight={true}
+          />
+        </div>
 
       </div>
     </>

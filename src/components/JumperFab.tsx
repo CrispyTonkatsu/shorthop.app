@@ -32,7 +32,7 @@ export default function JumperFab({ targetSectionRef }: JumperFabProps) {
     <div className={isFabVisible ? "visible" : "invisible"}>
       <div className="fab">
         <button
-          className="btn btn-lg btn-secondary"
+          className="btn btn-lg btn-primary"
           onClick={fabClickHandler}
         >
           Projects

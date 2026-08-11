@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/navbar/Navbar";
+import Footer from "../components/Footer";
 
 export default function RootLayout() {
   return (
@@ -7,6 +8,7 @@ export default function RootLayout() {
       <main className="flex-1 overflow-y-auto relative">
         <Navbar />
         <Outlet />
+        <Footer />
       </main>
     </div>
   );

@@ -1,4 +1,6 @@
-interface ProjectCardProps {
+import { Link } from "react-router-dom";
+
+export interface ProjectCardProps {
   // Project Info
   projectName: string,
   teamName: string,
@@ -13,8 +15,16 @@ interface ProjectCardProps {
 };
 
 export default function ProjectCard({ projectName, teamName, projectRoles, description, image = '', imageAlt = '', projectPage = '', isRight = false }: ProjectCardProps) {
+  const readMoreButton = projectPage == "" ?
+    null : (<Link
+      to={projectPage}
+      className="btn btn-secondary btn-dash w-full"
+    >
+      Read More
+    </Link>);
+
   return (
-    <div className={"flex flex-col md:flex-row h-3/4 p-4 " + (isRight ? "justify-end" : "justify-start")}>
+    <div className={`flex flex-col h-3/5 ${isRight ? "md:flex-row-reverse" : "md:flex-row"}`}>
       <div className="flex flex-col bg-base-100 p-8">
         <div className="text-2xl text-primary font-bold italic">
           {projectName}
@@ -28,7 +38,9 @@ export default function ProjectCard({ projectName, teamName, projectRoles, descr
           {
             projectRoles.map(role => {
               return (
-                <div className="font-extralight pe-1">
+                <div
+                  key={role}
+                  className="font-extralight pe-1">
                   {role}
                 </div>
               );
@@ -37,9 +49,27 @@ export default function ProjectCard({ projectName, teamName, projectRoles, descr
         </div>
 
         <div>
-          thisis some test text that will boil down into the total iof 3 sentences or so Idk how much is a good idea here but yeah here we have it a bunch of rtext on the screen taht has a lot o ftypes alksjdlaksjdklj
+          {
+            // TODO: Consider making an expand button for mobile
+            description
+          }
+        </div>
+
+        <div className="hidden md:inline mt-auto pt-4">
+          {readMoreButton}
         </div>
       </div>
-    </div >
+
+      <figure className="p-8 bg-base-100/50">
+        <img
+          src={image}
+          alt={imageAlt}
+        />
+      </figure>
+
+      <div className="flex md:hidden flex-col bg-base-100/50 p-4">
+        {readMoreButton}
+      </div>
+    </div>
   );
 }

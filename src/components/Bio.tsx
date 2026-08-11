@@ -4,7 +4,7 @@ export default function Bio() {
   return (
     <div className="text-left p-8 md:pr-4">
       <p className="text-4xl">
-        Hello, I'm
+        Hihii, I'm
         <div className="btn-link text-info font-bold">
           <a href="https://www.linkedin.com/in/edgar-donoso-mansilla">Edgar Jose Donoso Mansilla</a>
         </div>
