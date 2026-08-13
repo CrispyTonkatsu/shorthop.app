@@ -1,5 +1,5 @@
 import ProjectCard from "../components/cards/ProjectCard";
-import { projectData } from "../data/projects/ProjectData";
+import { projectData } from "../content/projects/ProjectData";
 
 export default function Projects() {
   // NOTE: Consider adding a filter functionality for different types of projects

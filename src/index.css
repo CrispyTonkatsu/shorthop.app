@@ -4,8 +4,6 @@
   themes: light, sunset;
 }
 
-@plugin "@tailwindcss/typography";
-
 @layer utilities {
   .bg-dot-pattern {
     background-color: var(--color-base-100);
