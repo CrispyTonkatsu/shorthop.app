@@ -1,7 +1,10 @@
 @import "tailwindcss";
+
 @plugin "daisyui" {
   themes: light, sunset;
 }
+
+@plugin "@tailwindcss/typography";
 
 @layer utilities {
   .bg-dot-pattern {

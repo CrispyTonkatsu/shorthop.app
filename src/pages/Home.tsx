@@ -2,7 +2,7 @@ import { useRef } from "react";
 import Bio from "../components/Bio";
 import RecentBlogsList from "../components/RecentBlogsList"; import JumperFab from "../components/JumperFab";
 import ProjectCard from "../components/cards/ProjectCard";
-import { projectData } from "../data/projects/ProjectData";
+import { projectData } from "../content/projects/ProjectData";
 
 export default function Home() {
   const arrow_down = (

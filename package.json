@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tailwindcss/typography": "tailwindcss/typography",
     "@tailwindcss/vite": "^4.3.2",
     "daisyui": "^5.6.16",
     "fluid-tailwind": "^1.0.4",
