@@ -9,7 +9,7 @@ export const projectData: ProjectCardProps[] = [
 		teamName: "Backstage Crew",
 		projectRoles: ["Tech Lead", "Gameplay Engineer", "Tools Development"],
 		description: "Worked with an interdisciplinary 18 people team to develop an Unreal Engine 5 action game in 8 months.",
-		projectPage: "/idolonduty",
+		projectPage: "/markdown/blogs/TestBlog",
 		// TODO: Consider changing this so that I can write the content that will be displayed in there for image carousels
 		image: "https://games.digipen.edu/system/photos/14616/original/Idolonduty_Screenshot08.png"
 	},

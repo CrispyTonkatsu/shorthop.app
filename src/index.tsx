@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import MarkdownReader from "./pages/MarkdownReader";
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
       {
         path: 'contact',
         element: <Contact />
+      },
+      {
+        path: 'markdown/:type/:file',
+        element: <MarkdownReader />
       }
     ],
   },
