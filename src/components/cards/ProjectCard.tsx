@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+// TODO: Consider adding dates so that you can show duration and time
+
 export interface ProjectCardProps {
   // Project Info
   projectName: string,
@@ -34,19 +36,17 @@ export default function ProjectCard({ projectName, teamName, projectRoles, descr
           {teamName}
         </div>
 
-        <div className="flex flex-row overflow-x-scroll">
-          {
-            projectRoles.map(role => {
-              return (
-                <div
-                  key={role}
-                  className="font-extralight pe-1">
-                  {role}
-                </div>
-              );
-            })
-          }
-        </div>
+        {
+          projectRoles.map(role => {
+            return (
+              <div
+                key={role}
+                className="font-extralight text-sm pe-1">
+                {role}
+              </div>
+            );
+          })
+        }
 
         <div>
           {
@@ -60,12 +60,15 @@ export default function ProjectCard({ projectName, teamName, projectRoles, descr
         </div>
       </div>
 
-      <figure className="p-8 bg-base-100/50">
-        <img
-          src={image}
-          alt={imageAlt}
-        />
-      </figure>
+      {
+        image == "" ? null :
+          <figure className="p-8 bg-base-100/50">
+            <img
+              src={image}
+              alt={imageAlt}
+            />
+          </figure>
+      }
 
       <div className="flex md:hidden flex-col bg-base-100/50 p-4">
         {readMoreButton}

@@ -1,16 +1,29 @@
+import ProjectCard from "../components/cards/ProjectCard";
+import { projectData } from "../data/projects/ProjectData";
+
 export default function Projects() {
   // NOTE: Consider adding a filter functionality for different types of projects
+
+  let isRight = false;
 
   return (
     <div className="flex flex-col min-h-1/2 place-content-center">
       {
-        // TODO: Left off here setting up the projects page
+        projectData.map(project => {
+          const output = (
+            <div className="p-4 md:p-8">
+              <ProjectCard
+                {...project}
+                isRight={isRight}
+              />
+            </div>
+          );
+
+          isRight = !isRight;
+
+          return output;
+        })
       }
-      <div className="flex flex-row place-self-center">
-        <div className="text-7xl text-info font-bold italic">
-          Setting up the projects page
-        </div>
-      </div>
     </div>
   );
 }

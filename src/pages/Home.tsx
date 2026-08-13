@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import Bio from "../components/Bio";
-import RecentBlogsList from "../components/RecentBlogsList";
-import JumperFab from "../components/JumperFab";
+import RecentBlogsList from "../components/RecentBlogsList"; import JumperFab from "../components/JumperFab";
 import ProjectCard from "../components/cards/ProjectCard";
+import { projectData } from "../data/projects/ProjectData";
 
 export default function Home() {
   const arrow_down = (
@@ -12,6 +12,8 @@ export default function Home() {
   );
 
   const targetSectionRef = useRef(null);
+
+  let isRight = false;
 
   return (
     <>
@@ -57,32 +59,25 @@ export default function Home() {
         <section className="divider divider-secondary" />
 
         {
-          // TODO: Automate this when the project data is in another format we can load up
+          // TODO: Change this so that the projects shown are the top 3 selected
         }
 
-        <div className="p-4 md:p-8">
-          <ProjectCard
-            projectName="Project Name"
-            teamName="Non Applicable Studios"
-            projectRoles={["Programmer", "Jester", "Producer", "Workaholic"]}
-            description="This is a simple 2 sentence description. It is concise and simple which allows for maximizing space"
-            image="https://images.unsplash.com/photo-1575639807401-0c333374e3ed?ixid=M3wxMTI1OHwwfDF8cmFuZG9tfHx8fHx8fHx8MTc4NjMwMzExN3w&ixlib=rb-4.1.0&q=85&w=1920"
-            projectPage="/projects"
-            isRight={false}
-          />
-        </div>
+        {
+          projectData.map(project => {
+            const output = (
+              <div className="p-4 md:p-8">
+                <ProjectCard
+                  {...project}
+                  isRight={isRight}
+                />
+              </div>
+            );
 
-        <div className="p-4 md:p-8">
-          <ProjectCard
-            projectName="Project Name"
-            teamName="Non Applicable Studios"
-            projectRoles={["Programmer", "Jester", "Producer", "Workaholic"]}
-            description="This is a simple 2 sentence description. It is concise and simple which allows for maximizing space"
-            image="https://images.unsplash.com/photo-1575639807401-0c333374e3ed?ixid=M3wxMTI1OHwwfDF8cmFuZG9tfHx8fHx8fHx8MTc4NjMwMzExN3w&ixlib=rb-4.1.0&q=85&w=1920"
-            projectPage="/projects"
-            isRight={true}
-          />
-        </div>
+            isRight = !isRight;
+
+            return output;
+          })
+        }
 
       </div>
     </>
