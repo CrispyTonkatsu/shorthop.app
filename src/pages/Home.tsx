@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import Bio from "../components/Bio";
-import RecentBlogsList from "../components/RecentBlogsList"; import JumperFab from "../components/JumperFab";
+import RecentBlogsList from "../components/RecentBlogsList";
+import JumperFab from "../components/JumperFab";
 import ProjectCard from "../components/cards/ProjectCard";
 import { projectData } from "../content/projects/ProjectData";
 

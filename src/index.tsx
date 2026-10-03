@@ -16,6 +16,10 @@ export const router = createBrowserRouter([
         element: <Home />
       },
       {
+        path: 'landing/:type',
+        element: <Home />
+      },
+      {
         path: 'projects',
         element: <Projects />
       },
