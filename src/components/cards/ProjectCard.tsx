@@ -64,6 +64,7 @@ export default function ProjectCard({ projectName, teamName, projectRoles, descr
         image == "" ? null :
           <figure className="p-8 bg-base-100/50">
             <img
+              className="w-sm md:w-3xl"
               src={image}
               alt={imageAlt}
             />

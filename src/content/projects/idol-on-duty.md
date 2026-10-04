@@ -25,5 +25,3 @@ For this project, the team was provided a Perforce depot, however, we were not a
 With those 3 guidelines a pipeline and expectation was set for ensuring the engineers on the team didn't block the QA, design, art and production work needed for the project.
 
 In addition to thinking about the pipelines, I provided architectural support to my teammates when designing and implementing systems meant to be interfaced by the other departments.
-
-###
