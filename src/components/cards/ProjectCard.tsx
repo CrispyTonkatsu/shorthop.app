@@ -28,6 +28,7 @@ export default function ProjectCard({ projectName, teamName, projectRoles, descr
   return (
     <div className={`flex flex-col h-3/5 ${isRight ? "md:flex-row-reverse" : "md:flex-row"}`}>
       <div className="flex flex-col bg-base-100 p-8">
+
         <div className="text-2xl text-primary font-bold italic">
           {projectName}
         </div>
@@ -48,12 +49,7 @@ export default function ProjectCard({ projectName, teamName, projectRoles, descr
           })
         }
 
-        <div>
-          {
-            // TODO: Consider making an expand button for mobile
-            description
-          }
-        </div>
+        <div>{description}</div>
 
         <div className="hidden md:inline mt-auto pt-4">
           {readMoreButton}
@@ -62,7 +58,7 @@ export default function ProjectCard({ projectName, teamName, projectRoles, descr
 
       {
         image == "" ? null :
-          <figure className="p-8 bg-base-100/50">
+          <figure className="flex flex-col items-center p-8 bg-base-100/50">
             <img
               className="w-sm md:w-3xl"
               src={image}
