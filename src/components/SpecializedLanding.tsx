@@ -3,18 +3,24 @@ import RecentBlogsList from "./RecentBlogsList";
 import Projects from "../pages/Projects";
 import { useRef } from "react";
 import JumperFab from "./JumperFab";
+import Bio from "./Bio";
 
 class SpecializedLandingData {
   bio: React.ReactNode
   highlight: React.ReactNode
-  projects: string[]
+  projects?: string[]
 }
 
 const landingPages = new Map<string, SpecializedLandingData>([
+  ["personal", {
+    bio: (<Bio title="Personal Page" />),
+    highlight: (<>No Highlight Here</>),
+  }],
+
   ["test", {
-    bio: (<>Bio Here</>),
+    bio: (<Bio title="Test Title" />),
     highlight: (<>Highlight Here</>),
-    projects: ["IdolOnDuty"]
+    projects: ["idol-on-duty", "idol-on-duty"]
   }]
 ]);
 
@@ -23,7 +29,6 @@ export default function SpecializedLanding() {
 
   const pageData = landingPages.get(type);
 
-  const targetSectionRef = useRef(null);
 
   if (pageData == undefined) {
     return <Navigate to="/" />
@@ -32,7 +37,7 @@ export default function SpecializedLanding() {
   return (
     <>
       <div className="flex flex-col md:flex-row bg-base-200">
-        <div className="flex-1 text-left p-8 md:pr-4">
+        <div className="flex-1 text-left p-8 pb-0 md:pb-8 md:pr-4">
           <p className="text-4xl pb-4">
             Hello, I'm
             <div className="btn-link text-info font-bold">
@@ -45,7 +50,7 @@ export default function SpecializedLanding() {
           </div>
         </div>
 
-        <div className="flex-1 p-8 md:pl-4 md:pt-4">
+        <div className="flex-1 md:pt-4">
           <div className="w-full p-4">
             {pageData.highlight}
           </div>
@@ -54,13 +59,29 @@ export default function SpecializedLanding() {
         </div>
       </div>
 
+      {
+        pageData.projects ? <HighlightProjects projects={pageData.projects} /> : null
+      }
+    </>
+  );
+}
+
+interface HighlightProjectsProps {
+  projects: string[]
+}
+
+function HighlightProjects({ projects }: HighlightProjectsProps) {
+  const targetSectionRef = useRef(null);
+
+  return (
+    <>
       <JumperFab
         targetSectionRef={targetSectionRef}
       />
 
       <div className="flex flex-col p-8 pb-0">
         <button
-          className="btn btn-secondary text-2xl"
+          className="btn btn-primary btn-outline text-2xl"
           ref={targetSectionRef}
           onClick={
             () => {
@@ -72,7 +93,7 @@ export default function SpecializedLanding() {
         </button>
       </div>
 
-      <Projects />
+      <Projects selectedProjects={projects} />
     </>
   );
 }

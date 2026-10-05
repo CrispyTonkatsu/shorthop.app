@@ -1,17 +1,22 @@
-import ProjectCard from "../components/cards/ProjectCard";
+import ProjectCard, { type ProjectCardProps } from "../components/cards/ProjectCard";
 import { projectData } from "../content/projects/ProjectData";
 
-export default function Projects() {
-  // NOTE: Consider adding a filter functionality for different types of projects
+export interface ProjectsProps {
+  selectedProjects?: string[]
+};
+
+export default function Projects({ selectedProjects = null }: ProjectsProps) {
+  const toDisplay: ProjectCardProps[] = (
+    selectedProjects ?
+      selectedProjects.filter(project => projectData.has(project)).map(project => projectData.get(project))
+      : [...projectData.values()]);
 
   let isRight = false;
-
-  const toDisplay = [...projectData.values()];
 
   return (
     <div className="flex flex-col min-h-1/2 place-content-center">
       {
-        toDisplay.map(project => {
+        toDisplay.map((project: ProjectCardProps) => {
           const output = (
             <div className="p-4 md:p-8">
               <ProjectCard
