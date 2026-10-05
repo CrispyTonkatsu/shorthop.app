@@ -35,11 +35,10 @@ function BlogListing({ name, tags, blogLink }: BlogListingProps) {
 export default function RecentBlogsList() {
   // TODO: Make this fetch and generate the list programatically (where we actually get to use react lol beyond the basics)
 
-  // NOTE: only using the last 3 posts because that fits nicely
+  // NOTE: only using the last 2 posts because that fits nicely
   const postList = [
     'post-0',
     'post-1',
-    'post-2',
   ];
 
   return (

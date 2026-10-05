@@ -5,6 +5,7 @@ import Projects from "./pages/Projects";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import MarkdownReader from "./pages/MarkdownReader";
+import SpecializedLanding from "./components/SpecializedLanding";
 
 export const router = createBrowserRouter([
   {
@@ -17,7 +18,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'landing/:type',
-        element: <Home />
+        element: <SpecializedLanding />
       },
       {
         path: 'projects',
