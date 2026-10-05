@@ -6,10 +6,12 @@ export default function Projects() {
 
   let isRight = false;
 
+  const toDisplay = [...projectData.values()];
+
   return (
     <div className="flex flex-col min-h-1/2 place-content-center">
       {
-        projectData.map(project => {
+        toDisplay.map(project => {
           const output = (
             <div className="p-4 md:p-8">
               <ProjectCard

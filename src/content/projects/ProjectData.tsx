@@ -1,10 +1,7 @@
 import type { ProjectCardProps } from "../../components/cards/ProjectCard";
 
-// TODO: Add the writeup section to this or the alternate data type
-// NOTE: This would maybe be better off as its own data type that then has a mapping function to be a ProjectCardProps
-
-export const projectData: ProjectCardProps[] = [
-	{
+export const projectData = new Map<string, ProjectCardProps>([
+	["idol-on-duty", {
 		projectName: "Idol On Duty",
 		teamName: "Backstage Crew",
 		projectRoles: ["Tech Lead", "Gameplay Engineer", "Tools Development"],
@@ -12,8 +9,9 @@ export const projectData: ProjectCardProps[] = [
 		projectPage: "/markdown/projects/idol-on-duty",
 		// TODO: Consider changing this so that I can write the content that will be displayed in there for image carousels
 		image: "https://games.digipen.edu/system/photos/14616/original/Idolonduty_Screenshot08.png"
-	},
-	{
+	}],
+
+	["hockey-stop", {
 		projectName: "Hockey Stop",
 		teamName: "Non-Applicable Studio",
 		projectRoles: ["Producer", "Physics Engine Developer", "Compute Physics Engineer", "Input Systems Engineer", "UI Framework"],
@@ -21,8 +19,9 @@ export const projectData: ProjectCardProps[] = [
 		projectPage: "/hockey-stop",
 		// TODO: Add image
 		image: ""
-	},
-	{
+	}],
+
+	["na-engine", {
 		projectName: "Non-Applicable Engine",
 		teamName: "Non-Applicable Studio",
 		projectRoles: ["Producer", "Physics Engine Developer", "Core-Systems Engineer"],
@@ -30,9 +29,5 @@ export const projectData: ProjectCardProps[] = [
 		projectPage: "/non-applicable-engine",
 		// TODO: Add image
 		image: ""
-	}
-]
-
-// TODO: Implement this for the homepage
-export const topProjectData: ProjectCardProps[] = []
-
+	}]
+]);

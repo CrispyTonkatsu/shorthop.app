@@ -2,8 +2,7 @@ import { useRef } from "react";
 import Bio from "../components/Bio";
 import RecentBlogsList from "../components/RecentBlogsList";
 import JumperFab from "../components/JumperFab";
-import ProjectCard from "../components/cards/ProjectCard";
-import { projectData } from "../content/projects/ProjectData";
+import Projects from "./Projects";
 
 export default function Home() {
   const arrow_down = (
@@ -13,8 +12,6 @@ export default function Home() {
   );
 
   const targetSectionRef = useRef(null);
-
-  let isRight = false;
 
   return (
     <>
@@ -62,23 +59,7 @@ export default function Home() {
         {
           // TODO: Change this so that the projects shown are the top 3 selected
         }
-
-        {
-          projectData.map(project => {
-            const output = (
-              <div className="p-4 md:p-8">
-                <ProjectCard
-                  {...project}
-                  isRight={isRight}
-                />
-              </div>
-            );
-
-            isRight = !isRight;
-
-            return output;
-          })
-        }
+        <Projects />
 
       </div>
     </>
