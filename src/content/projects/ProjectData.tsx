@@ -35,7 +35,7 @@ export const projectData = new Map<string, ProjectCardProps>([
 		teamName: "Non-Applicable Studio",
 		projectRoles: ["Producer", "Physics Engine Developer", "Core-Systems Engineer"],
 		start: new Date(2024, 8),
-		end: new Date(2024, 12),
+		end: new Date(2024, 11),
 		description: "Developed a custom 2D game engine in a 4 people team with the goal of supporting physics-based platforming mechanics.",
 		projectPage: "/non-applicable-engine",
 		// TODO: Add image

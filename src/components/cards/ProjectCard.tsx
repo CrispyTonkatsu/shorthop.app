@@ -37,7 +37,8 @@ export default function ProjectCard({ projectName, linkSection = null, teamName,
   const endString = format(end, dateFormat);
 
   const durationString = formatDistanceStrict(end, start, {
-    unit: "month"
+    unit: "month",
+    roundingMethod: "ceil"
   });
 
   return (
