@@ -14,3 +14,7 @@
     background-size: 10px 10px;
   }
 }
+
+.carousel-item {
+  scroll-margin-top: 15rem; /* Adjust to match your navbar height */
+}
