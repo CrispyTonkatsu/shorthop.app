@@ -29,7 +29,6 @@ export default function SpecializedLanding() {
 
   const pageData = landingPages.get(type);
 
-
   if (pageData == undefined) {
     return <Navigate to="/" />
   }

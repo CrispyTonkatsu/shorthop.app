@@ -99,7 +99,7 @@ export default function ProjectCard({ projectName, teamName, projectRoles, start
               {
                 images.map((image, index) => {
                   return (
-                    <a href={"#" + image.link} className="btn btn-circle btn-neutral btn-xs" >{index}</a>
+                    <a href={"#" + image.link} className="btn btn-circle btn-neutral btn-xs" >{index + 1}</a>
                   );
                 })
               }
