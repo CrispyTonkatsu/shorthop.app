@@ -25,7 +25,7 @@ export default function ProjectCard({ projectName, teamName, projectRoles, start
   const readMoreButton = projectPage == "" ?
     null : (<Link
       to={projectPage}
-      className="btn btn-secondary btn-dash w-full"
+      className="btn btn-accent btn-outline w-full"
     >
       Read More
     </Link>);
@@ -73,7 +73,7 @@ export default function ProjectCard({ projectName, teamName, projectRoles, start
 
         <div>{description}</div>
 
-        <div className="hidden md:inline mt-auto pt-4">
+        <div className="hidden md:inline mt-auto">
           {readMoreButton}
         </div>
       </div>
@@ -108,7 +108,7 @@ export default function ProjectCard({ projectName, teamName, projectRoles, start
           : null
       }
 
-      <div className="flex md:hidden flex-col bg-base-100/50 p-4">
+      <div className="inline md:hidden bg-base-100/50">
         {readMoreButton}
       </div>
     </div>

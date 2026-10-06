@@ -12,10 +12,10 @@ export default function Bio({ title }: BioProps) {
   return (
     <>
       <div className="pb-2">
-        <text className="text-primary text-xl font-light">{title}</text>
+        <text className="text-primary text-md md:text-xl font-light">{title}</text>
       </div>
 
-      <div className="inline text-lg">
+      <div className="inline text-sm md:text-lg">
         {bioContent}
       </div>
     </>

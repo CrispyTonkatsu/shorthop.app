@@ -38,7 +38,7 @@ export default function SpecializedLanding() {
     <>
       <div className="flex flex-col md:flex-row bg-base-200">
         <div className="flex-1 text-left p-8 pb-0 md:pb-8 md:pr-4">
-          <p className="text-4xl pb-4">
+          <p className="text-xl md:text-4xl pb-4">
             Hello, I'm
             <div className="btn-link text-info font-bold">
               <a href="https://www.linkedin.com/in/edgar-donoso-mansilla">Edgar Jose Donoso Mansilla</a>
