@@ -22,9 +22,9 @@ export const projectData = new Map<string, ProjectCardProps>([
 	["hockey-stop", {
 		projectName: "Hockey Stop",
 		teamName: "Non-Applicable Studio",
-		projectRoles: ["Producer", "Physics Engine Developer", "Compute Physics Engineer", "Input Systems Engineer", "UI Framework"],
-		start: new Date(2025, 9),
-		end: new Date(2025, 9),
+		projectRoles: ["Producer", "Physics Engine", "Input Systems", "UI"],
+		start: new Date(2025, 0),
+		end: new Date(2025, 4),
 		description: "Utilized the Non-Applicable Engine to develop a 2D platformer and improved the engine for better low-code workflows and performance.",
 		projectPage: "/hockey-stop",
 		// TODO: Add image
@@ -34,8 +34,8 @@ export const projectData = new Map<string, ProjectCardProps>([
 		projectName: "Non-Applicable Engine",
 		teamName: "Non-Applicable Studio",
 		projectRoles: ["Producer", "Physics Engine Developer", "Core-Systems Engineer"],
-		start: new Date(2025, 9),
-		end: new Date(2025, 9),
+		start: new Date(2024, 8),
+		end: new Date(2024, 12),
 		description: "Developed a custom 2D game engine in a 4 people team with the goal of supporting physics-based platforming mechanics.",
 		projectPage: "/non-applicable-engine",
 		// TODO: Add image

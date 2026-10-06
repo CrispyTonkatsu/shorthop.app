@@ -6,8 +6,6 @@ import remarkMath from "remark-math";
 
 const markdownFiles = import.meta.glob('../content/**/*.md', { query: '?raw', eager: true }) as Record<string, string | { default: string }>;
 
-// TODO: Split the display from the loading that way we can have both components be reusable
-
 export default function MarkdownReader() {
   const { type, file } = useParams();
 
