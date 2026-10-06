@@ -18,7 +18,7 @@ export default function Projects({ selectedProjects = null }: ProjectsProps) {
       {
         toDisplay.map((project: ProjectCardProps) => {
           const output = (
-            <div className="p-4 md:p-8">
+            <div className="px-2 md:px-8 py-4">
               <ProjectCard
                 {...project}
                 isRight={isRight}

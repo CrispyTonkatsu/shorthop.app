@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { format, formatDistanceStrict } from "date-fns";
+import type React from "react";
 
 export class ProjectCardImage {
   link: string
@@ -9,6 +10,7 @@ export class ProjectCardImage {
 export interface ProjectCardProps {
   // Project Info
   projectName: string,
+  linkSection?: React.ReactNode,
   teamName: string,
   projectRoles: string[],
   start: Date
@@ -21,7 +23,7 @@ export interface ProjectCardProps {
   isRight?: boolean
 };
 
-export default function ProjectCard({ projectName, teamName, projectRoles, start, end, description, images = null, projectPage = '', isRight = false }: ProjectCardProps) {
+export default function ProjectCard({ projectName, linkSection = null, teamName, projectRoles, start, end, description, images = null, projectPage = '', isRight = false }: ProjectCardProps) {
   const readMoreButton = projectPage == "" ?
     null : (<Link
       to={projectPage}
@@ -30,7 +32,7 @@ export default function ProjectCard({ projectName, teamName, projectRoles, start
       Read More
     </Link>);
 
-  const dateFormat = "dd-MMM";
+  const dateFormat = "Y-MMM";
   const startString = format(start, dateFormat);
   const endString = format(end, dateFormat);
 
@@ -42,8 +44,14 @@ export default function ProjectCard({ projectName, teamName, projectRoles, start
     <div className={`flex flex-col h-3/5 ${isRight ? "md:flex-row-reverse" : "md:flex-row"}`}>
       <div className="flex-2 flex flex-col bg-base-100 p-4 md:p-8">
 
-        <div className="text-2xl text-primary font-bold italic">
-          {projectName}
+        <div className="flex flex-row justify-between w-full">
+          <div className="text-2xl text-primary font-bold italic">
+            {projectName}
+          </div>
+
+          <div className="text-secondary text-xs md:text-lg place-self-center">
+            {linkSection}
+          </div>
         </div>
 
         <div className="flex flex-row text-xs md:text-lg text-info font-light">
@@ -95,15 +103,19 @@ export default function ProjectCard({ projectName, teamName, projectRoles, start
                 })
               }
             </div>
-            <div className="flex flex-row w-full justify-center gap-2">
-              {
-                images.map((image, index) => {
-                  return (
-                    <a href={"#" + image.link} className="btn btn-circle btn-neutral btn-xs" >{index + 1}</a>
-                  );
-                })
-              }
-            </div>
+            {
+              images.length > 1 ?
+                <div className="flex flex-row w-full justify-center gap-2">
+                  {
+                    images.map((image, index) => {
+                      return (
+                        <a href={"#" + image.link} className="btn btn-circle btn-neutral btn-xs" >{index + 1}</a>
+                      );
+                    })
+                  }
+                </div>
+                : null
+            }
           </div>
           : null
       }
