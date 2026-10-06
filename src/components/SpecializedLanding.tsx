@@ -19,7 +19,7 @@ const landingPages = new Map<string, SpecializedLandingData>([
 
   ["test", {
     bio: (<Bio title="Test Title" />),
-    highlight: (<>Highlight Here</>),
+    highlight: (null),
     projects: ["idol-on-duty", "idol-on-duty"]
   }]
 ]);
@@ -36,7 +36,7 @@ export default function SpecializedLanding() {
   return (
     <>
       <div className="flex flex-col md:flex-row bg-base-200">
-        <div className="flex-1 text-left p-8 pb-0 md:pb-8 md:pr-4">
+        <div className="flex-1 text-left p-4 md:p-8 pb-0 md:pb-4 md:pr-4">
           <p className="text-xl md:text-4xl pb-4">
             Hello, I'm
             <div className="btn-link text-info font-bold">
