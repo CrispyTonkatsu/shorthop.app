@@ -47,6 +47,4 @@ export const router = createBrowserRouter([
       }
     ],
   },
-], {
-  basename: "/shorthop.app/"
-})
+]);
