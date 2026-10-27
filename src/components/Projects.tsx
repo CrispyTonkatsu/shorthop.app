@@ -5,11 +5,15 @@ export interface ProjectsProps {
   selectedProjects?: string[]
 };
 
-export default function Projects({ selectedProjects = null }: ProjectsProps) {
+export default function Projects({ selectedProjects }: ProjectsProps) {
   const toDisplay: ProjectCardProps[] = (
     selectedProjects ?
-      selectedProjects.filter(project => projectData.has(project)).map(project => projectData.get(project))
-      : [...projectData.values()]);
+      selectedProjects.flatMap(project => {
+        const data = projectData.get(project);
+        return data ? [data] : [];
+      })
+      : Array.from(projectData.values())
+  );
 
   return (
     <div className="flex flex-col min-h-1/2 place-content-center mt-8">
