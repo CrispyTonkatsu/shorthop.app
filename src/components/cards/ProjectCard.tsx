@@ -82,7 +82,7 @@ export default function ProjectCard({ projectName, linkSection = null, teamName,
 
         <div>{description}</div>
 
-        <div className="hidden md:inline mt-auto">
+        <div className="hidden md:inline mt-auto pt-4">
           {readMoreButton}
         </div>
       </div>

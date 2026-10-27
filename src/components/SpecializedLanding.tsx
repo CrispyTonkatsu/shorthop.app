@@ -1,6 +1,6 @@
 import { Navigate, useParams } from "react-router-dom";
 import RecentBlogsList from "./RecentBlogsList";
-import Projects from "../pages/Projects";
+import Projects from "../components/Projects";
 import { useRef } from "react";
 import JumperFab from "./JumperFab";
 import Bio from "./Bio";
@@ -56,7 +56,9 @@ export default function SpecializedLanding() {
       </div>
 
       {
-        pageData.projects ? <HighlightProjects projects={pageData.projects} /> : null
+        pageData.projects ?
+          <HighlightProjects projects={pageData.projects} />
+          : null
       }
     </div>
   );

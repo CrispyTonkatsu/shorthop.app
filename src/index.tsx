@@ -1,10 +1,10 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import RootLayout from "./layouts/RootLayout";
-import Projects from "./pages/Projects";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import MarkdownReader from "./pages/MarkdownReader";
 import SpecializedLanding from "./components/SpecializedLanding";
+import ProjectsPage from "./pages/ProjectsPage";
 
 export const router = createBrowserRouter([
   {
@@ -21,7 +21,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'projects',
-        element: <Projects />
+        element: <ProjectsPage />
       },
       {
         path: 'blog',
