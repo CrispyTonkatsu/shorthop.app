@@ -19,7 +19,7 @@ export default function ThemeSwapper({ lightTheme, darkTheme }: ThemeSwapperProp
 
     // Otherwise just read what the user wants
     try {
-      return JSON.parse(savedData);
+      return Boolean(JSON.parse(savedData));
     } catch {
       localStorage.removeItem("isDark");
     }

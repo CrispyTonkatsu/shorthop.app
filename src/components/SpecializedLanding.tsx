@@ -29,7 +29,7 @@ const landingPages = new Map<string, SpecializedLandingData>([
 export default function SpecializedLanding() {
   const { type } = useParams();
 
-  const pageData = landingPages.get(type);
+  const pageData = landingPages.get(type ?? "");
 
   if (pageData == undefined) {
     return <Navigate to="/" />
@@ -72,7 +72,7 @@ interface HighlightProjectsProps {
 }
 
 function HighlightProjects({ projects }: HighlightProjectsProps) {
-  const targetSectionRef = useRef(null);
+  const targetSectionRef = useRef<HTMLButtonElement>(null);
 
   return (
     <div className="">

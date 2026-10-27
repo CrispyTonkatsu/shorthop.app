@@ -22,7 +22,7 @@ export default function Navbar() {
     }
   ];
 
-  const detailsRef = useRef(null)
+  const detailsRef = useRef<HTMLDetailsElement>(null)
 
   function handleClose() {
     detailsRef.current?.removeAttribute("open");
