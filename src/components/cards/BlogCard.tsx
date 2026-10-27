@@ -14,7 +14,7 @@ export default function BlogCard({ title, date = null, brief, file, img = null }
   const dateString = date ? format(date, dateFormat) : null;
 
   return (
-    <div className="card image-full w-70 h-60 bg-base-100">
+    <div className={`card ${img ? "image-full" : ""} w-70 h-60 bg-base-100`}>
       <figure>
         {img ?
           <img src={img} />
@@ -28,7 +28,7 @@ export default function BlogCard({ title, date = null, brief, file, img = null }
             {title}
           </div>
 
-          <div>
+          <div className="text-sm">
             {dateString}
           </div>
         </h2>

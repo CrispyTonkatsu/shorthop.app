@@ -22,4 +22,18 @@ export const blogData: BlogCardProps[] = [
 		brief: "This is a simple test post that should have some simple stuff to show but nothing crazy here",
 		file: "TestBlog"
 	},
+
+	{
+		title: "Test2",
+		date: undefined,
+		brief: "This is a simple test post that should have some simple stuff to show but nothing crazy here",
+		file: "TestBlog"
+	},
+
+	{
+		title: "Test2",
+		date: undefined,
+		brief: "This is a simple test post that should have some simple stuff to show but nothing crazy here",
+		file: "TestBlog"
+	},
 ];

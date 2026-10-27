@@ -10,7 +10,7 @@ export default function Blog() {
         Blogs:
       </div>
 
-      <div className="grid grid-flow-row md:grid-flow-col px-2 md:px-0 md:space-x-4 space-y-4">
+      <div className="grid md:grid-cols-3 px-2 md:px-0 md:space-x-4 space-y-4">
         {
           blogData.map(blog => {
             return (
