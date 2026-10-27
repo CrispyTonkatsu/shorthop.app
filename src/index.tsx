@@ -13,7 +13,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Navigate to='landing/test' replace />
+        element: <Navigate to='landing/sim' replace />
       },
       {
         path: 'landing/:type',

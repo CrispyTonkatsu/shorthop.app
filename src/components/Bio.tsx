@@ -4,7 +4,7 @@ export interface BioProps {
 
 const bioContent = (
   <>
-    I'm a software engineer specialized in real-time system development. My concentration areas are rigid-body simulations, embedded systems and GPU rendering/computing. Having lived in 6 countries across America, South America and Asia (Bolivia, Thailand, Argentina, Malaysia, Philippines, USA), I easily connect with people and work enabling a culture of learning to exceed expectations.
+    I'm a software engineer specialized in real-time system development. Having lived across Bolivia, Thailand, Argentina, Malaysia, Philippines and the USA, I easily connect with people and work enabling a culture of learning to exceed expectations.
   </>
 );
 

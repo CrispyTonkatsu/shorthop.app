@@ -12,16 +12,16 @@ class SpecializedLandingData {
 }
 
 const landingPages = new Map<string, SpecializedLandingData>([
+  ["sim", {
+    bio: (<Bio title="Simulation Engineer" />),
+    highlight: (null),
+    projects: ["idol-on-duty"]
+  }],
+
   ["personal", {
     bio: (<Bio title="Personal Page" />),
     highlight: (<>No Highlight Here</>),
   }],
-
-  ["test", {
-    bio: (<Bio title="Test Title" />),
-    highlight: (null),
-    projects: ["idol-on-duty", "idol-on-duty"]
-  }]
 ]);
 
 export default function SpecializedLanding() {
