@@ -6,6 +6,5 @@ import { qrcode } from "vite-plugin-qrcode";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/shorthop.app/',
   plugins: [react(), tailwindcss(), qrcode(), babel({ presets: [reactCompilerPreset()] })],
 });
