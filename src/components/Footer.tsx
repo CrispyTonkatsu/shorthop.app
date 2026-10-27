@@ -86,8 +86,6 @@ export default function Footer() {
       <div className="text-sm text-base-content/40 font-light italic p-2">
         Made with {"<3"} using React, Tailwind and DaisyUI
       </div>
-
-      <div className="pb-20" />
     </div>
   );
 }

@@ -4,8 +4,8 @@ export default function Contact() {
   return (
     <div className="flex flex-col p-8">
       <div className="bg-base-200 p-4 rounded-lg">
-        <div className="text-4xl text-info font-bold p-2">
-          Contact<br />Information
+        <div className="text-4xl text-center text-info font-bold p-4">
+          Contact
         </div>
 
         <div className="px-2 text-sm opacity-60">
