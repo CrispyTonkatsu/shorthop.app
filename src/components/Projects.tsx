@@ -11,22 +11,17 @@ export default function Projects({ selectedProjects = null }: ProjectsProps) {
       selectedProjects.filter(project => projectData.has(project)).map(project => projectData.get(project))
       : [...projectData.values()]);
 
-  let isRight = false;
-
   return (
-    <div className="flex flex-col min-h-1/2 place-content-center">
+    <div className="flex flex-col min-h-1/2 place-content-center mt-8">
       {
         toDisplay.map((project: ProjectCardProps) => {
           const output = (
-            <div className="py-4">
+            <div className="py-2">
               <ProjectCard
                 {...project}
-                isRight={isRight}
               />
             </div>
           );
-
-          isRight = !isRight;
 
           return output;
         })

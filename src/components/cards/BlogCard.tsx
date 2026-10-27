@@ -37,7 +37,8 @@ export default function BlogCard({ title, date = null, brief, file, img = null }
 
         <div className="card-actions justify-end">
           <Link
-            to={`/markdown/blogs/${file}`} className="btn btn-dash btn-accent"
+            to={`/markdown/blogs/${file}`}
+            className="btn btn-accent btn-outline"
           >
             Read
           </Link>

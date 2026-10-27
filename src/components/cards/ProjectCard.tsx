@@ -20,14 +20,13 @@ export interface ProjectCardProps {
   images?: ProjectCardImage[]
   // Website info
   projectPage: string
-  isRight?: boolean
 };
 
-export default function ProjectCard({ projectName, linkSection = null, teamName, projectRoles, start, end, description, images = null, projectPage = '', isRight = false }: ProjectCardProps) {
+export default function ProjectCard({ projectName, linkSection = null, teamName, projectRoles, start, end, description, images = null, projectPage = '' }: ProjectCardProps) {
   const readMoreButton = projectPage == "" ?
     null : (<Link
       to={projectPage}
-      className="btn btn-accent btn-outline w-full"
+      className="btn btn-accent btn-outline w-full md:w-auto"
     >
       Read More
     </Link>);
@@ -42,7 +41,7 @@ export default function ProjectCard({ projectName, linkSection = null, teamName,
   });
 
   return (
-    <div className={`flex flex-col h-3/5 ${isRight ? "md:flex-row-reverse" : "md:flex-row"}`}>
+    <div className="flex flex-col h-3/5 md:flex-row">
       <div className="flex-2 flex flex-col bg-base-100 p-4 md:p-8">
 
         <div className="flex flex-row justify-between w-full">
@@ -68,11 +67,12 @@ export default function ProjectCard({ projectName, linkSection = null, teamName,
 
         <div className="flex flex-col md:flex-row md:gap-4 py-2">
           {
+            // className="font-light text-xs md:text-sm">
             projectRoles.map(role => {
               return (
                 <div
                   key={role}
-                  className="font-light text-xs md:text-sm">
+                  className="badge badge-ghost text-sm text-accent badge-sm p-2 mt-2">
                   {role}
                 </div>
               );
@@ -82,7 +82,7 @@ export default function ProjectCard({ projectName, linkSection = null, teamName,
 
         <div>{description}</div>
 
-        <div className="hidden md:inline mt-auto pt-4">
+        <div className="hidden md:flex mt-auto pt-4 place-content-end">
           {readMoreButton}
         </div>
       </div>
@@ -110,7 +110,9 @@ export default function ProjectCard({ projectName, linkSection = null, teamName,
                   {
                     images.map((image, index) => {
                       return (
-                        <a href={"#" + image.link} className="btn btn-circle btn-neutral btn-xs" >{index + 1}</a>
+                        <a href={"#" + image.link} className="btn btn-circle btn-neutral btn-xs" >
+                          {index + 1}
+                        </a>
                       );
                     })
                   }
@@ -121,9 +123,9 @@ export default function ProjectCard({ projectName, linkSection = null, teamName,
           : null
       }
 
-      <div className="inline md:hidden bg-base-100/50">
+      <div className="inline md:hidden bg-base-100/50 p-2">
         {readMoreButton}
       </div>
-    </div>
+    </div >
   );
 }
