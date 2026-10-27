@@ -11,7 +11,7 @@ export default function MarkdownReader() {
 
   const filePath = `../content/${type}/${file}.md`;
 
-  // TODO: Left off here: Implement async loading for smaller bundle sizes
+  // TODO: Implement async loading for smaller bundle sizes
 
   const rawModule = markdownFiles[filePath];
 

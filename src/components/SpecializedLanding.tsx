@@ -34,26 +34,23 @@ export default function SpecializedLanding() {
   }
 
   return (
-    <>
-      <div className="flex flex-col md:flex-row bg-base-200">
-        <div className="flex-1 text-left p-4 md:p-8 pb-0 md:pb-4 md:pr-4">
-          <p className="text-xl md:text-4xl pb-4">
+    <div>
+      <div className="flex flex-col md:flex-row p-4 md:py-8">
+        <div className="flex-1 text-left">
+          <div className="text-xl md:text-3xl">
             Hello, I'm
             <div className="btn-link text-info font-bold">
               <a href="https://www.linkedin.com/in/edgar-donoso-mansilla">Edgar Jose Donoso Mansilla</a>
             </div>
-          </p>
+          </div>
 
-          <div className="flex-1 text-left md:pr-4">
+          <div className="flex-1 text-left">
             {pageData.bio}
           </div>
         </div>
 
-        <div className="flex-1 md:pt-4">
-          <div className="w-full p-4">
-            {pageData.highlight}
-          </div>
-
+        <div className="flex-1 pt-4 md:pt-0">
+          {pageData.highlight}
           <RecentBlogsList />
         </div>
       </div>
@@ -61,7 +58,7 @@ export default function SpecializedLanding() {
       {
         pageData.projects ? <HighlightProjects projects={pageData.projects} /> : null
       }
-    </>
+    </div>
   );
 }
 
@@ -73,12 +70,12 @@ function HighlightProjects({ projects }: HighlightProjectsProps) {
   const targetSectionRef = useRef(null);
 
   return (
-    <>
+    <div className="">
       <JumperFab
         targetSectionRef={targetSectionRef}
       />
 
-      <div className="flex flex-col p-8 pb-0">
+      <div className="flex flex-col">
         <button
           className="btn btn-primary btn-outline text-2xl"
           ref={targetSectionRef}
@@ -93,6 +90,6 @@ function HighlightProjects({ projects }: HighlightProjectsProps) {
       </div>
 
       <Projects selectedProjects={projects} />
-    </>
+    </div>
   );
 }

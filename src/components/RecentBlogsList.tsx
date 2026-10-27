@@ -25,7 +25,7 @@ function BlogListing({ name, tags, blogLink }: BlogListingProps) {
         </div>
       </div>
 
-      <Link className="left btn btn-link btn-info" to={blogLink}>
+      <Link className="btn btn-link btn-info" to={blogLink}>
         Read More
       </Link>
     </li >
@@ -43,7 +43,7 @@ export default function RecentBlogsList() {
 
   return (
     <>
-      <ul className="list bg-base-300 backdrop-blur tracking-wide">
+      <ul className="list tracking-wide bg-base-200">
         <li className="p-4 pb-2 text-s opacity-80 text-primary">
           Recent posts
         </li>

@@ -4,7 +4,7 @@ export const projectData = new Map<string, ProjectCardProps>([
 	["idol-on-duty", {
 		projectName: "Idol On Duty",
 		linkSection: (<>
-			<a className="underline" href="https://games.digipen.edu/games/idol-on-duty">DigiPen</a>, <a href="">Steam (Soon)</a>
+			<a className="underline" href="https://games.digipen.edu/games/idol-on-duty">DigiPen</a>, <a className="underline" href="https://store.steampowered.com/app/5306710/Idol_On_Duty/">Steam</a>
 		</>),
 		teamName: "Backstage Crew",
 		projectRoles: ["Tech Lead", "Gameplay Engineer", "Tools Development"],

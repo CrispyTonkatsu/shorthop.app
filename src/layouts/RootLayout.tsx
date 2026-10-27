@@ -7,7 +7,13 @@ export default function RootLayout() {
     <div className="@container flex flex-col bg-dot-pattern bg-fixed">
       <ScrollRestoration />
       <Navbar />
-      <Outlet />
+
+      <div className="flex flex-col justify-center w-full">
+        <div className="max-w-250 mx-auto">
+          <Outlet />
+        </div>
+      </div>
+
       <Footer />
     </div>
   );

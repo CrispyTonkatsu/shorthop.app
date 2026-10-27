@@ -11,7 +11,7 @@ const bioContent = (
 export default function Bio({ title }: BioProps) {
   return (
     <>
-      <div className="pb-2">
+      <div className="py-2">
         <text className="text-primary text-md md:text-xl font-light">{title}</text>
       </div>
 
