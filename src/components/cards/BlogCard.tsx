@@ -9,7 +9,7 @@ export interface BlogCardProps {
   img?: string
 }
 
-export default function BlogCard({ title, date = null, brief, file, img = null }: BlogCardProps) {
+export default function BlogCard({ title, date = undefined, brief, file, img = undefined }: BlogCardProps) {
   const dateFormat = "Y-MMM";
   const dateString = date ? format(date, dateFormat) : null;
 

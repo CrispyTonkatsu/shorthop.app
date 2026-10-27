@@ -22,7 +22,7 @@ export interface ProjectCardProps {
   projectPage: string
 };
 
-export default function ProjectCard({ projectName, linkSection = null, teamName, projectRoles, start, end, description, images = null, projectPage = '' }: ProjectCardProps) {
+export default function ProjectCard({ projectName, linkSection = undefined, teamName, projectRoles, start, end, description, images = undefined, projectPage = '' }: ProjectCardProps) {
   const readMoreButton = projectPage == "" ?
     null : (<Link
       to={projectPage}
