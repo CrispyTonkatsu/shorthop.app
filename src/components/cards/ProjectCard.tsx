@@ -3,7 +3,7 @@ import { format, formatDistanceStrict } from "date-fns";
 import type React from "react";
 
 export class ProjectCardImage {
-  link: string
+  link?: string
   alt?: string
 }
 
@@ -23,13 +23,15 @@ export interface ProjectCardProps {
 };
 
 export default function ProjectCard({ projectName, linkSection = undefined, teamName, projectRoles, start, end, description, images = undefined, projectPage = '' }: ProjectCardProps) {
-  const readMoreButton = projectPage == "" ?
-    null : (<Link
+  const readMoreButton = (projectPage == "" ?
+    null
+    : (<Link
       to={projectPage}
       className="btn btn-accent btn-outline w-full md:w-auto"
     >
       Read More
-    </Link>);
+    </Link>)
+  );
 
   const dateFormat = "Y-MMM";
   const startString = format(start, dateFormat);
