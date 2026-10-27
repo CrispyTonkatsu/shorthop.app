@@ -1,11 +1,12 @@
 import { SocialButton, socials } from "../components/Footer";
+import profileImg from "../content/contact-pic.jpg"
 
 export default function Contact() {
   return (
-    <div className="flex flex-col p-8">
-      <div className="bg-base-200 p-4 rounded-lg">
-        <div className="text-4xl text-center text-info font-bold p-4">
-          Contact
+    <div className="flex flex-col-reverse md:flex-row p-8">
+      <div className="flex flex-col bg-base-200 p-4 rounded-lg">
+        <div className="text-4xl text-primary font-bold p-2">
+          Get in touch
         </div>
 
         <div className="px-2 text-sm opacity-60">
@@ -14,7 +15,7 @@ export default function Contact() {
 
         <div className="p-2">
           Business email:<br />
-          <a href="mailto:edguitar.dm.alt@gmail.com" className="text-primary underline">
+          <a href="mailto:edguitar.dm.alt@gmail.com" className="text-info underline">
             edguitar.dm.alt@gmail.com
           </a>
         </div>
@@ -23,6 +24,13 @@ export default function Contact() {
           Personal email:<br />
           <a href="mailto:edguitar.dm@gmail.com" className="text-secondary underline">
             edguitar.dm@gmail.com
+          </a>
+        </div>
+
+        <div className="p-2">
+          Phone:<br />
+          <a className="text-accent underline">
+            +1 206 671 8990
           </a>
         </div>
 
@@ -36,6 +44,13 @@ export default function Contact() {
           }
         </div>
       </div>
-    </div>
+
+      <div>
+        <img
+          className="object-cover object-right aspect-square max-h-100"
+          src={profileImg}
+        />
+      </div>
+    </div >
   );
 }

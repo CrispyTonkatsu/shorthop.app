@@ -3,6 +3,7 @@ import Projects from "../components/Projects";
 import { useRef } from "react";
 import JumperFab from "./JumperFab";
 import Bio from "./Bio";
+import tempImg from "../content/contact-pic.jpg"
 
 class SpecializedLandingData {
   bio: React.ReactNode
@@ -14,7 +15,7 @@ const landingPages = new Map<string, SpecializedLandingData>([
   ["sim", {
     bio: (<Bio title="Simulation Engineer" />),
     highlight: (<img
-      src="https://images.unsplash.com/photo-1536527705555-4d12a7830d9e?ixid=M3wxMTI1OHwwfDF8cmFuZG9tfHx8fHx8fHx8MTc5MzA4MTc1MXw&ixlib=rb-4.1.0&q=85&w=2640"
+      src={tempImg}
     />),
     projects: ["idol-on-duty", "idol-on-duty"]
   }],
