@@ -9,7 +9,7 @@ export default function RootLayout() {
       <Navbar />
 
       <div className="flex flex-col grow justify-center w-full">
-        <div className="max-w-250 mx-auto">
+        <div className="max-w-full sm:max-w-250 mx-auto">
           <Outlet />
         </div>
       </div>

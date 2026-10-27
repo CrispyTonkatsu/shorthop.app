@@ -20,7 +20,7 @@ export default function MarkdownReader() {
     : rawModule?.default || "404 - Post not found";
 
   return (
-    <div className="prose max-w-none bg-base-100/80 p-8">
+    <div className="prose bg-base-200 p-4 md:p-8">
       <ReactMarkdown
         remarkPlugins={[remarkMath]}
         rehypePlugins={[rehypeHighlight, rehypeKatex]}
